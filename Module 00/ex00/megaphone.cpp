@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 15:50:36 by rafaria           #+#    #+#             */
-/*   Updated: 2025/03/06 16:36:07 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/03/24 17:17:47 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ char *StrCapitalize(char *str)
 
     while (str[i])
     {
-        if (str[i] >= 'a' && str[i] <= 'z')
-            str[i] = str[i] - 32;
+
+        str[i] = toupper(str[i]);
 		i++;
 	}
 	return (str);
@@ -41,8 +41,7 @@ int main(int argc, char **argv)
         return (0);
     }
     else
-    {
-		
+    {		
         while (i <= argc)
         {
 			if (i == 2)
@@ -56,8 +55,6 @@ int main(int argc, char **argv)
 			i++;
         }
 		std::cout << FinalString << std::endl;
-        
-
         return (0);
     }
 }
