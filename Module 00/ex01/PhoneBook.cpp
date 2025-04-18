@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 18:57:28 by rafaria           #+#    #+#             */
-/*   Updated: 2025/04/18 17:28:43 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/04/18 17:37:33 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "Contact.hpp"
 #include <iostream>
 #include <sstream>
+#include <iomanip>
 
 void PhoneBook::addContact (Contact c)
 {
@@ -25,10 +26,13 @@ void PhoneBook::addContact (Contact c)
 void PhoneBook::search ()
 {
 	int index;
+	std::string name;
+	std::string lastname;
+    std::string nickname;	
     std::string number;
+	
 	std::cout << "Please, may I ask you to give me an index : " << std::endl;
 	std::getline (std::cin,number);
-
 	std::istringstream iss(number);
 	iss >> index;
 	
@@ -41,12 +45,14 @@ void PhoneBook::search ()
 	std::cout << "|-------------------------------------------|" << std::endl;
 	std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
 	std::cout << "|----------|----------|----------|----------|" << std::endl;
-	// get_contact_info(index);
-	std::cout << _contact[index].getName() << std::endl;
-	std::cout << _contact[index].getLastName() << std::endl;
-	std::cout << _contact[index].getLastName() << std::endl;
-	
-	std::cout << "|-------------------------------------------|" << std::endl;
+	name =  _contact[index].getName();
+	lastname = _contact[index].getLastName();
+	nickname =   _contact[index].getNickname(); 
+    std::cout << "|" << std::setw(10) << index
+              << "|" << std::setw(10) << name
+              << "|" << std::setw(10) << lastname
+              << "|" << std::setw(10) << nickname
+              << "|" << std::endl;
 }
 
 // int	get_contact_info(int index)
