@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 18:57:28 by rafaria           #+#    #+#             */
-/*   Updated: 2025/04/18 17:25:29 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/04/18 17:28:43 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,9 @@ void PhoneBook::search ()
 	std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
 	std::cout << "|----------|----------|----------|----------|" << std::endl;
 	// get_contact_info(index);
-	std::cout << _contact[0].getName() << std::endl;
-	s
+	std::cout << _contact[index].getName() << std::endl;
+	std::cout << _contact[index].getLastName() << std::endl;
+	std::cout << _contact[index].getLastName() << std::endl;
 	
 	std::cout << "|-------------------------------------------|" << std::endl;
 }
