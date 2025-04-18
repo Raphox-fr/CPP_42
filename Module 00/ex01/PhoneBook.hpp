@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 15:58:53 by rafaria           #+#    #+#             */
-/*   Updated: 2025/04/18 12:35:11 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/04/18 16:53:29 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@ class PhoneBook {
         PhoneBook (void);
         ~PhoneBook (void);
         void addContact(Contact c);
+        void search();
+        
+        void ShowContact(Contact c);
         int totaladded;
         int index;
     private:

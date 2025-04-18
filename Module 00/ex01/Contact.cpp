@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 18:49:46 by rafaria           #+#    #+#             */
-/*   Updated: 2025/04/18 12:52:23 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/04/18 17:22:31 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,25 @@ void Contact::setNickname() {
     std::cout << "Your nickname :" << std::endl;
     std::getline(std::cin, this->nickname);
 }
+
+std::string Contact::getName() 
+{
+    return name;
+}
+
+std::string Contact::getLastName() 
+{
+    return last_name;
+}
+
+std::string Contact::getNickname() 
+{
+    return nickname;
+}
+
+
+//--------------------------------------------------------
+
 
 void Contact::setPhoneNumber() {
     std::cout << "Your phone number :" << std::endl;
