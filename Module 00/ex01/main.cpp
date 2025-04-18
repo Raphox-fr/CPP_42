@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 19:00:59 by rafaria           #+#    #+#             */
-/*   Updated: 2025/04/17 19:31:55 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/04/18 13:00:43 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,22 @@
 #include <iostream>
 
 
-void add_contact()
+Contact add_contact()
 {
-	Contact contact;
-
-	contact.setName();
-	contact.setLastName();
-	contact.setNickname();
-	contact.setPhoneNumber();
-	contact.setDarkestSecret();
-
-	std::cout << "Contact added!" << std::endl;
+	Contact c;
+	c.setName();
+	c.setLastName();
+	c.setNickname();
+	c.setPhoneNumber();
+	c.setDarkestSecret();
+	return (c);
 }
+
 
 int main(void)
 {
     PhoneBook phonebook;
+	phonebook.totaladded = 0;
 
     std::string input;
 
@@ -38,7 +38,9 @@ int main(void)
     {
 		std::getline (std::cin,input);
 		if (input == "ADD")
-			add_contact();
+		{
+			phonebook.addContact(add_contact());
+		}
 		if (input == "SEARCH")	
 			std::cout << "SEARCH" << std::endl;
 		if (input == "EXIT")	

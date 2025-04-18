@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 18:50:01 by rafaria           #+#    #+#             */
-/*   Updated: 2025/04/17 19:27:58 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/04/18 12:52:42 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #include <iostream>
 #include <stdio.h>
+
+
 
 class Contact
 {
@@ -27,11 +29,11 @@ class Contact
     public:
         Contact (void);
         ~Contact (void);
-        std::string setName();
-        std::string setLastName();
-        std::string setNickname();
-        std::string setPhoneNumber();
-        std::string setDarkestSecret();
+        void setName();
+        void setLastName();
+        void setNickname();
+        void setPhoneNumber();
+        void setDarkestSecret();
 };  
 
 

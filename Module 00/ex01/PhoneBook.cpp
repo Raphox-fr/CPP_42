@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 18:57:28 by rafaria           #+#    #+#             */
-/*   Updated: 2025/04/17 19:15:13 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/04/18 12:47:31 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,12 @@
 #include <iostream>
 
 
-
-
+void PhoneBook::addContact (Contact c)
+{
+	index = totaladded % 8;
+    _contact[index] = c;
+    totaladded++;
+}
 
 PhoneBook::PhoneBook (void)
 {
