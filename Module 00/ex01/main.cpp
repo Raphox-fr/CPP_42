@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 19:00:59 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/02 10:39:24 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/05/02 12:31:37 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,6 @@
 #include "Contact.hpp"
 #include <iostream>
 
-Contact add_contact()
-{
-	Contact c;
-	c.setName();
-	c.setLastName();
-	c.setNickname();
-	c.setPhoneNumber();
-	c.setDarkestSecret();
-	return (c);
-}
 
 int main(void)
 {
@@ -34,9 +24,11 @@ int main(void)
     while (42)
     {
 		std::getline (std::cin,input);
+		if (std::cin.eof())
+			return -1;
 		if (input == "ADD")
 		{
-			phonebook.addContact(add_contact());
+			phonebook.addContact();
 		}
 		if (input == "SEARCH")
 		{

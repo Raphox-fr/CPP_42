@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 18:50:01 by rafaria           #+#    #+#             */
-/*   Updated: 2025/04/18 17:23:36 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/05/02 12:18:16 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ class Contact
     public:
         Contact (void);
         ~Contact (void);
-        void setName();
-        void setLastName();
-        void setNickname();
-        void setPhoneNumber();
-        void setDarkestSecret();
+        int setName();
+        int setLastName();
+        int setNickname();
+        int setPhoneNumber();
+        int setDarkestSecret();
 
         std::string getName();
         std::string getLastName();

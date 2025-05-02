@@ -5,15 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/06 15:50:36 by rafaria           #+#    #+#             */
-/*   Updated: 2025/03/24 17:17:47 by rafaria          ###   ########.fr       */
+/*   Created: 2025/05/02 11:47:58 by rafaria           #+#    #+#             */
+/*   Updated: 2025/05/02 11:48:05 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
 
-char *StrCapitalize(char *str)
+std::string StrCapitalize(char *str)
 {
     int i;
 
@@ -21,12 +21,10 @@ char *StrCapitalize(char *str)
 
     while (str[i])
     {
-
         str[i] = toupper(str[i]);
 		i++;
 	}
 	return (str);
-
 }
 
 
