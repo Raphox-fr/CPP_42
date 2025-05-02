@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 18:57:28 by rafaria           #+#    #+#             */
-/*   Updated: 2025/04/18 17:37:33 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/05/02 11:05:09 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,14 @@ void PhoneBook::addContact (Contact c)
     totaladded++;
 }
 
+std::string	format_contact(std::string str)
+{
+	if (str.length() > 10)
+	{
+		return (str.substr(0, 9) + ".");
+	}
+	return str;
+}
 void PhoneBook::search ()
 {
 	int index;
@@ -35,13 +43,11 @@ void PhoneBook::search ()
 	std::getline (std::cin,number);
 	std::istringstream iss(number);
 	iss >> index;
-	
 	if (index < 0 || index >= 8) 
 	{
         std::cout << "Invalid index." << std::endl;
         return;
-    }
-
+	}
 	std::cout << "|-------------------------------------------|" << std::endl;
 	std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
 	std::cout << "|----------|----------|----------|----------|" << std::endl;
@@ -49,18 +55,11 @@ void PhoneBook::search ()
 	lastname = _contact[index].getLastName();
 	nickname =   _contact[index].getNickname(); 
     std::cout << "|" << std::setw(10) << index
-              << "|" << std::setw(10) << name
-              << "|" << std::setw(10) << lastname
-              << "|" << std::setw(10) << nickname
+              << "|" << std::setw(10) << format_contact(name)
+              << "|" << std::setw(10) << format_contact(lastname)
+              << "|" << std::setw(10) << format_contact(nickname)
               << "|" << std::endl;
 }
-
-// int	get_contact_info(int index)
-// {
-	
-	
-// }
-
 
 PhoneBook::PhoneBook (void)
 {
@@ -73,8 +72,10 @@ PhoneBook::~PhoneBook (void)
 }
 
 
-// std::string name;
 
+
+
+// std::string name;
 // std::cout << "Please, enter your full name: ";
 // std::getline (std::cin,name);
 // std::cout << "Hello, " << name << "!\n";

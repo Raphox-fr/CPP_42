@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 19:00:59 by rafaria           #+#    #+#             */
-/*   Updated: 2025/04/18 16:53:34 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/05/02 10:39:24 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,6 @@ int main(void)
 		{
 			phonebook.search();
 		}
-			
-
 		if (input == "EXIT")	
 			return 0;        
     }		
