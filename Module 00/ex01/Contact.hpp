@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 18:50:01 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/05 14:32:33 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/05/05 17:45:37 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ class Contact
         std::string getLastName();
         std::string getNickname();
         std::string getDarkestSecret();
+        std::string getPhoneNumber(); 
+
     };  
 
 

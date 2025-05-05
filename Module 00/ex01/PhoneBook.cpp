@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 18:57:28 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/05 15:11:02 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/05/05 18:05:00 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,27 @@ std::string	format_contact(std::string str)
 	}
 	return str;
 }
+
+int stringToIndex(std::string str)
+{
+    if (str.empty())
+        return -1;
+
+    int i = 0;
+    while (str[i])
+    {
+        if (!std::isdigit(str[i]))
+            return -1;
+        i++;
+    }
+
+    std::istringstream iss(str);
+    int index;
+    iss >> index;
+
+    return index;
+}
+
 void PhoneBook::search ()
 {
 	int index;
@@ -54,6 +75,13 @@ void PhoneBook::search ()
     std::string nickname;
     std::string number;
     std::string darkestsecret;
+
+	name =  _contact[0].getName();
+	if (name.empty() == 1)
+	{
+		std::cout << "No contacts to display" << std::endl;
+		return;
+	}
 	
 	std::cout << "|-------------------------------------------|" << std::endl;
 	std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
@@ -74,26 +102,27 @@ void PhoneBook::search ()
 	}
 	std::cout << "\nGive me an index : " << std::endl;
 	std::getline (std::cin,number);
-	std::istringstream iss(number);
-	iss >> index;
-	if (index < 0 || index >= 8)
+	if (stringToIndex(number) == -1)
 	{
         std::cout << "Invalid index." << std::endl;
         return;
 	}
+	index = stringToIndex(number);
 	name =  _contact[index].getName();
 	lastname = _contact[index].getLastName();
 	nickname =   _contact[index].getNickname();
+	number =   _contact[index].getPhoneNumber();
 	darkestsecret = _contact[index].getDarkestSecret();
 	if (name.empty() == 1)
 	{
-		std::cout << "Invalid index" << std::endl;
+		std::cout << "Index not associated to any contacts" << std::endl;
 		return;
 	}
-	std::cout << "Name : "<< name << std::endl;
-	std::cout << "Lastname : " << lastname << std::endl;
-	std::cout << "Nickname : " << nickname << std::endl;
-	std::cout << "Darkest secret : "  << darkestsecret << std::endl;
+	std::cout << "Name: "<< name << std::endl;
+	std::cout << "Lastname: " << lastname << std::endl;
+	std::cout << "Nickname: " << nickname << std::endl;
+	std::cout << "Phone number: " << number << std::endl;
+	std::cout << "Darkest secret: "  << darkestsecret << std::endl;
 	return ;
 }
 
