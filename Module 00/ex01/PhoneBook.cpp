@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 18:57:28 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/02 12:29:16 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/05/05 15:11:02 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,15 +53,18 @@ void PhoneBook::search ()
 	std::string lastname;
     std::string nickname;
     std::string number;
+    std::string darkestsecret;
 	
 	std::cout << "|-------------------------------------------|" << std::endl;
 	std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
 	std::cout << "|----------|----------|----------|----------|" << std::endl;
-	while (i < totaladded)
+	while (i < 8)
 	{
 		name =  _contact[i].getName();
 		lastname = _contact[i].getLastName();
 		nickname =   _contact[i].getNickname();
+		if (name.empty() == 1)
+			break;
 		std::cout << "|" << std::setw(10) << i
 		<< "|" << std::setw(10) << format_contact(name)
 		<< "|" << std::setw(10) << format_contact(lastname)
@@ -80,10 +83,17 @@ void PhoneBook::search ()
 	}
 	name =  _contact[index].getName();
 	lastname = _contact[index].getLastName();
-	nickname =   _contact[i].getNickname();
-	std::cout << name << std::endl;
-	std::cout << lastname << std::endl;
-	std::cout << nickname << std::endl;
+	nickname =   _contact[index].getNickname();
+	darkestsecret = _contact[index].getDarkestSecret();
+	if (name.empty() == 1)
+	{
+		std::cout << "Invalid index" << std::endl;
+		return;
+	}
+	std::cout << "Name : "<< name << std::endl;
+	std::cout << "Lastname : " << lastname << std::endl;
+	std::cout << "Nickname : " << nickname << std::endl;
+	std::cout << "Darkest secret : "  << darkestsecret << std::endl;
 	return ;
 }
 

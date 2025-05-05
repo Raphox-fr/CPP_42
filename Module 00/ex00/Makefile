@@ -2,7 +2,7 @@ NAME			=	megaphone
 
 SRCS			=	megaphone.cpp
 
-OBJS			=	${SRCS:.c=.o}
+OBJS			=	${SRCS:.cpp=.o}
 
 CC			=	c++ 
 
@@ -13,12 +13,12 @@ all			:	${NAME}
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
-# clean			:
-# 	rm -rf ${OBJS}
+clean			:
+	rm -rf ${OBJS}
 
-# fclean			:	clean
-# 	rm -rf ${NAME}
+fclean			:	clean
+	rm -rf ${NAME}
 
-# re				:	fclean all
+re				:	fclean all
 
 .PHONY			:	all clean fclean re

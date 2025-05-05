@@ -6,21 +6,17 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 18:49:46 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/02 12:32:06 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/05/05 14:44:26 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-
 int Contact::setName() {
     std::cout << "Your name: ";
     std::getline(std::cin, this->name);
-
     if (this->name.empty()) 
     {
-		// if (std::cin.eof())
-        // 	return -1;
         std::cout << "This field cannot be empty. Please try again." << std::endl;
         std::cout << "Your name: ";
         std::getline(std::cin, this->name);
@@ -33,13 +29,11 @@ int Contact::setName() {
 		return (-1);    
     }
 	return (1);
-    
 }
 
 int Contact::setLastName() {
     std::cout << "Your last name: ";
     std::getline(std::cin, this->last_name);
-
     if (this->last_name.empty()) {
         std::cout << "This field cannot be empty. Please try again." << std::endl;
         std::cout << "Your last name: ";
@@ -55,7 +49,6 @@ int Contact::setLastName() {
 int Contact::setNickname() {
     std::cout << "Your nickname: ";
     std::getline(std::cin, this->nickname);
-
     if (this->nickname.empty()) {
         std::cout << "This field cannot be empty. Please try again." << std::endl;
         std::cout << "Your nickname: ";
@@ -117,6 +110,11 @@ std::string Contact::getLastName()
 std::string Contact::getNickname() 
 {
     return nickname;
+}
+
+std::string Contact::getDarkestSecret() 
+{
+    return darkest_secret;
 }
 
 Contact::Contact (void)
