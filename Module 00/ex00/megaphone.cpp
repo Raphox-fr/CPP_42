@@ -6,12 +6,11 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 11:47:58 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/05 17:14:26 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/05/06 12:19:31 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-
 
 std::string StrCapitalize(char *str)
 {
