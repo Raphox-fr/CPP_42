@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 15:30:07 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/07 14:19:32 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/05/07 14:36:11 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ class Zombie {
 
 Zombie* newZombie(std::string name);
 void randomChump( std::string name );
+Zombie* zombieHorde( int N, std::string name );
 
 
 #endif

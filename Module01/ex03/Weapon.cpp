@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/06 15:30:07 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/07 14:19:32 by rafaria          ###   ########.fr       */
+/*   Created: 2025/05/06 15:32:26 by rafaria           #+#    #+#             */
+/*   Updated: 2025/05/07 16:31:53 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
-
-#include <iostream>
-#include <stdio.h>
+#include "Weapon.hpp"
 
 
-class Zombie {
-    public:
-    Zombie (void);
-    ~Zombie (void);
-    
-    void setName(std::string name);
-    void announce( void );
-    private:
-    std::string name;
-    
-};
+Weapon::Weapon (void)
+{
+	std::cout << "Weapon Constructor called" << std::endl;
+}
 
-Zombie* newZombie(std::string name);
-void randomChump( std::string name );
+Weapon::~Weapon (void)
+{
+	std::cout << "Weapon Destructor called" << std::endl;
+}
 
 
-#endif
+
+// void Zombie::setName (std::string name)
+// {
+// 	this->name = name;
+// }
+
+// void Zombie::announce (void)
+// {
+// 	name = this->name;
+// 	std::cout << name << ": " << "BraiiiiiiinnnzzzZ..." <<  std::endl;
+// }

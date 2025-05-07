@@ -1,6 +1,6 @@
-NAME			=	BraiiiiiiinnnzzzZ
+NAME			=	Unnecessary_violence
 
-SRCS			=	main.cpp Zombie.cpp randomChump.cpp newZombie.cpp
+SRCS			=	main.cpp Weapon.cpp
 
 OBJS			=	${SRCS:.cpp=.o}
 
