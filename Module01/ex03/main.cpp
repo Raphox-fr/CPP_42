@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 19:00:59 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/14 12:01:54 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/05/14 16:30:45 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 int main(void)
 {
-	Weapon club = Weapon("crude spiked club");
+	Weapon club = Weapon("j'ai rien frere");
 	HumanA Bob("bob", club);
 	
 	return (1);

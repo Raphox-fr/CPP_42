@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 11:34:36 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/14 12:21:35 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/05/14 16:56:00 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,10 @@
 
 
 
-HumanA::HumanA (std::string name, Weapon a())
+HumanA::HumanA (std::string name, Weapon& weapon) : _name(name), _gun(weapon)
 {
 	std::cout << "HumainA Constructor called" << std::endl;
-    this->name = name;
-    this->a = a;
+	attack();
 }
 
 HumanA::~HumanA (void)
@@ -29,7 +28,7 @@ HumanA::~HumanA (void)
 
 void HumanA::attack (void)
 {
-	std::cout << "HumainA Destructor called" << std::endl;
+	std::cout << _name << " attacks with their " << _gun.getType() << std::endl;
 }
 
 // std::string&

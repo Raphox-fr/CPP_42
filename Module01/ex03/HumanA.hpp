@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 11:32:47 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/14 12:15:58 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/05/14 16:54:42 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,19 @@
 #include <stdio.h>
 #include "Weapon.hpp"
 
-
-
 class HumanA {
     public:
-    HumanA (std::string name, Weapon a);
+    HumanA(std::string name, Weapon& weapon);
     ~HumanA (void);
 
-    Weapon a;
+    // Weapon a;
     std::string name;
 
     void attack(void);
-    
-
+	
     private:
-        std::string type;
+		std::string _name;
+		Weapon _gun;
         
 };
 
