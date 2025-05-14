@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/17 19:00:59 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/14 12:01:54 by rafaria          ###   ########.fr       */
+/*   Created: 2025/05/14 11:34:36 by rafaria           #+#    #+#             */
+/*   Updated: 2025/05/14 12:21:35 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include <iostream>
-#include "Weapon.hpp"
-#include "HumanB.hpp"
 #include "HumanA.hpp"
+#include "Weapon.hpp"
 
-int main(void)
+
+
+HumanA::HumanA (std::string name, Weapon a())
 {
-	Weapon club = Weapon("crude spiked club");
-	HumanA Bob("bob", club);
-	
-	return (1);
-	
-}	
+	std::cout << "HumainA Constructor called" << std::endl;
+    this->name = name;
+    this->a = a;
+}
+
+HumanA::~HumanA (void)
+{
+	std::cout << "HumainA Destructor called" << std::endl;
+}
+
+void HumanA::attack (void)
+{
+	std::cout << "HumainA Destructor called" << std::endl;
+}
+
+// std::string&

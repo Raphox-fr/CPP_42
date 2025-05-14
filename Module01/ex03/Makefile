@@ -1,6 +1,6 @@
 NAME			=	Unnecessary_violence
 
-SRCS			=	main.cpp Weapon.cpp
+SRCS			=	main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 
 OBJS			=	${SRCS:.cpp=.o}
 

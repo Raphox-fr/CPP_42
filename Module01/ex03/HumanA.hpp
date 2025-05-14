@@ -1,26 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/17 19:00:59 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/14 12:01:54 by rafaria          ###   ########.fr       */
+/*   Created: 2025/05/14 11:32:47 by rafaria           #+#    #+#             */
+/*   Updated: 2025/05/14 12:15:58 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef HUMAN_A
+# define HUMAN_A
 
 #include <iostream>
+#include <stdio.h>
 #include "Weapon.hpp"
-#include "HumanB.hpp"
-#include "HumanA.hpp"
 
-int main(void)
-{
-	Weapon club = Weapon("crude spiked club");
-	HumanA Bob("bob", club);
-	
-	return (1);
-	
-}	
+
+
+class HumanA {
+    public:
+    HumanA (std::string name, Weapon a);
+    ~HumanA (void);
+
+    Weapon a;
+    std::string name;
+
+    void attack(void);
+    
+
+    private:
+        std::string type;
+        
+};
+
+
+#endif

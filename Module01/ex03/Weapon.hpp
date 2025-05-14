@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 15:30:07 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/07 16:32:23 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/05/14 12:19:46 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,12 @@
 
 class Weapon {
     public:
-    Weapon (void);
+    Weapon (std::string gun);
     ~Weapon (void);
+    std::string gun;
     
+    std::string&  getType();
+    void  setType();
 
     private:
         std::string type;    

@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/17 19:00:59 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/14 12:01:54 by rafaria          ###   ########.fr       */
+/*   Created: 2025/05/14 11:34:55 by rafaria           #+#    #+#             */
+/*   Updated: 2025/05/14 12:14:13 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include <iostream>
-#include "Weapon.hpp"
 #include "HumanB.hpp"
-#include "HumanA.hpp"
+#include "Weapon.hpp"
 
-int main(void)
+
+
+HumanB::HumanB (void)
 {
-	Weapon club = Weapon("crude spiked club");
-	HumanA Bob("bob", club);
-	
-	return (1);
-	
-}	
+	std::cout << "HumainB Constructor called" << std::endl;
+}
+
+HumanB::~HumanB (void)
+{
+	std::cout << "HumainB Destructor called" << std::endl;
+}
+
+void HumanB::attack (void)
+{
+	std::cout << "HumainB Destructor called" << std::endl;
+}
