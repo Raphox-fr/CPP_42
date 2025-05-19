@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 11:34:55 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/15 12:11:50 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/05/19 12:16:24 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,9 @@
 
 HumanB::HumanB (std::string name) : _name(name)
 {
-	std::cout << "HumainB Constructor called" << std::endl;
+	std::cout << "humanB Constructor called" << std::endl;
 	_gun = NULL;
 }
-
-
-
 
 void HumanB::setWeapon (Weapon& weapon)
 {
@@ -30,7 +27,7 @@ void HumanB::setWeapon (Weapon& weapon)
 
 HumanB::~HumanB (void)
 {
-	std::cout << "HumainB Destructor called" << std::endl;
+	std::cout << "humanB Destructor called" << std::endl;
 }
 
 void HumanB::attack (void)
@@ -42,4 +39,3 @@ void HumanB::attack (void)
 	}
 	std::cout << _name << " attacks with their " << _gun->getType() << std::endl;
 }
-

@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 19:00:59 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/07 15:01:48 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/05/19 11:03:14 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main(void)
 
 	Zombie *horde;
 	horde = zombieHorde(N, "raphael");
-	
+
 	while (i < N)
 	{
 		horde[i].announce();

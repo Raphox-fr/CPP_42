@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/15 16:26:05 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/16 16:01:54 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/05/17 17:26:54 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,5 @@ void  Harl::warning(void)
 }
 void  Harl::error(void)
 {
-    std::cout << "No cheese on my pizza, its unacceptable god damn" << std::endl;   
+    std::cout << "No cheese on my pizza, its unacceptable damn" << std::endl;   
 }

@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 15:32:26 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/15 12:04:41 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/05/19 12:10:44 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,6 @@ std::string& Weapon::getType()
 {
 	return (this->type);
 }
-
-
 
 
 // void Zombie::setName (std::string name)

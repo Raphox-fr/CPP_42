@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 14:38:12 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/07 14:59:55 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/05/17 17:42:58 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Zombie* zombieHorde( int N, std::string name )
 	while (i < N)
 	{
 		horde[i].setName(name);
-		i++; 	
+		i++;
 	}
 	return horde;
 }
