@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 11:32:47 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/19 16:56:39 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/05/19 17:02:02 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,9 @@ class HumanA {
     std::string name;
 
     void attack(void);
-	
     private:
 		  std::string _name;
 		  Weapon& _gun;
-        
 };
 
 

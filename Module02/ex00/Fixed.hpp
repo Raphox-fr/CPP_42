@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/06 15:30:07 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/07 14:36:11 by rafaria          ###   ########.fr       */
+/*   Created: 2025/05/20 11:38:26 by rafaria           #+#    #+#             */
+/*   Updated: 2025/05/21 17:49:03 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef FIXED_HPP
+#define FIXED_HPP
 
 #include <iostream>
-#include <stdio.h>
 
-
-class Zombie {
+class Fixed
+{
     public:
-    Zombie (void);
-    ~Zombie (void);
-    
-    void setName(std::string name);
-    void announce( void );
+        Fixed();
+        ~Fixed();
+        Fixed(const Fixed& arg);
+        Fixed& operator=(const Fixed& arg);
+        
+        int getRawBits( void ) const; //retourne la valeur du nombre à virgule fixe sans la convertir.
+        void setRawBits( int const raw ); // initialise la valeur du nombre à virgule fixe avec celle passée en paramètre.
     private:
-    std::string name;
-    
+        int _value;
+        
 };
-
-Zombie* newZombie(std::string name);
-void randomChump( std::string name );
-Zombie* zombieHorde( int N, std::string name );
-
 
 #endif

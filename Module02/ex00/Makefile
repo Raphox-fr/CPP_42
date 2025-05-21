@@ -1,17 +1,17 @@
-NAME			=	Moarbrainz
+NAME			=	Fixed
 
-SRCS			=	main.cpp Zombie.cpp  zombieHorde.cpp
+SRCS			=	main.cpp Fixed.cpp
 
 OBJS			=	${SRCS:.cpp=.o}
 
-CC			=	c++
+CXX			=	c++
 
-CFLAGS		=	-Werror -Wall -Wextra -std=c++98
+# CPPFLAGS		=	-Werror -Wall -Wextra -std=c++98
 
 all			:	${NAME}
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	$(CXX) $(CPPFLAGS) $(OBJS) -o $(NAME)
 
 clean			:
 	rm -rf ${OBJS}

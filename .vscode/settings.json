@@ -110,5 +110,6 @@
     "ctime": "cpp",
     "sstream": "cpp",
     "fstream": "cpp"
-  }
+  },
+  "C_Cpp.dimInactiveRegions": false
 }
