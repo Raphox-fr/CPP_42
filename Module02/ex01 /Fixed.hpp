@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 11:38:26 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/22 15:49:10 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/05/22 15:47:55 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 #define FIXED_HPP
 
 #include <iostream>
+#include <cmath>
+
 
 class Fixed
 {
     public:
         Fixed();
         ~Fixed();
+        Fixed(const int a);
         Fixed(const Fixed& arg);
         Fixed& operator=(const Fixed& arg);
-        
-        int getRawBits( void ) const; //retourne la valeur du nombre à virgule fixe sans la convertir.
-        void setRawBits( int const raw ); // initialise la valeur du nombre à virgule fixe avec celle passée en paramètre.
+
     private:
-        int _value;
-        
-        
-        
+        int _value; // diviser fixed_value par 256
+        int _fixed_value; // multiplier par 256
+
 };
 
 #endif
