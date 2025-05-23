@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 11:38:26 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/22 15:47:55 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/05/23 16:37:01 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,24 @@
 #include <iostream>
 #include <cmath>
 
-
 class Fixed
 {
     public:
         Fixed();
         ~Fixed();
-        Fixed(const int a);
         Fixed(const Fixed& arg);
         Fixed& operator=(const Fixed& arg);
-
-    private:
-        int _value; // diviser fixed_value par 256
-        int _fixed_value; // multiplier par 256
-
+        
+        Fixed(const int a);
+        Fixed(const float a);
+		float toFloat( void );
+		int toInt( void ) const;
+		
+		private:
+        	int _value;
+		
 };
+	
+std::ostream& operator<<(std::ostream& os, const Fixed& arg);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 11:06:59 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/22 15:50:01 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/05/22 16:11:23 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #include "Fixed.hpp"
 
 
-#include <iostream>
 int main( void )
 {
     Fixed a;

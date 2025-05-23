@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 11:38:10 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/22 15:19:27 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/05/23 16:37:09 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,26 +25,50 @@ Fixed::Fixed(const Fixed& arg)
 {
     // *this = arg;
     std::cout << "Copy constructor called" << std::endl;
-    this->_value = arg.getRawBits();
+    this->_value = arg._value;
     // std::cout << arg._value << std::endl;
 }
+
+
+Fixed::Fixed(const float a)
+{
+    std::cout << "Float constructor called" << std::endl;
+    this->_value = roundf(a * 256);
+}
+Fixed::Fixed(const int a)
+{
+    std::cout << "Int constructor called" << std::endl;
+    this->_value = a * 256;
+}
+
+float Fixed::toFloat( void )
+{
+    float result;
+    float diviser = 256; 
+    float value = this->_value;
+    
+    result = value / diviser;
+    return (result);
+}
+
+int Fixed::toInt( void ) const
+{
+    return (this->_value / 256 );
+}
+
+
 Fixed &Fixed::operator=(const Fixed& arg)
 {
     std::cout << "Copy assignment operator called" << std::endl;
-    this->_value = arg.getRawBits();
-    
+    this->_value = arg._value;
     return *this;
 }
 
-int  Fixed::getRawBits(void) const
+std::ostream& operator<<(std::ostream& os, const Fixed& arg)
 {
-    std::cout << "getRawBits member function called" << std::endl;
-    return (this->_value);
-}
-
-void  Fixed::setRawBits(int const raw)
-{
-    std::cout << "setRawBits member function called" << std::endl;
-    this->_value = raw;
+    int result;
+    result = arg.toInt();
+    os << result;
+    return os;
 }
 
