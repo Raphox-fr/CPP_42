@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 11:38:26 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/23 16:37:01 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/05/26 16:02:01 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Fixed
         
         Fixed(const int a);
         Fixed(const float a);
-		float toFloat( void );
+		float toFloat( void ) const ;
 		int toInt( void ) const;
 		
 		private:

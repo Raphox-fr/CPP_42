@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 11:38:10 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/23 16:37:09 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/05/26 16:01:47 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 Fixed::Fixed() {
     std::cout << "Default constructor called" << std::endl;
-    this->_value = 0;
 }
 
 Fixed::~Fixed() {
@@ -41,7 +40,7 @@ Fixed::Fixed(const int a)
     this->_value = a * 256;
 }
 
-float Fixed::toFloat( void )
+float Fixed::toFloat( void ) const
 {
     float result;
     float diviser = 256; 
@@ -66,8 +65,8 @@ Fixed &Fixed::operator=(const Fixed& arg)
 
 std::ostream& operator<<(std::ostream& os, const Fixed& arg)
 {
-    int result;
-    result = arg.toInt();
+    float result;
+    result = arg.toFloat();
     os << result;
     return os;
 }
