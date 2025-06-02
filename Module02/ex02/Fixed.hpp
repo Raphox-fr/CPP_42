@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 11:38:26 by rafaria           #+#    #+#             */
-/*   Updated: 2025/06/02 11:57:33 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/06/02 15:52:12 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,8 @@ class Fixed
 
     private:
         int _rawbits;
+        const static int lapuissance = 256;
+
 };
 
 std::ostream &operator<<(std::ostream &os, const Fixed &arg);

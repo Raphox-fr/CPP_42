@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 11:38:10 by rafaria           #+#    #+#             */
-/*   Updated: 2025/06/02 12:00:41 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/06/02 15:58:42 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,18 @@ Fixed::Fixed(const Fixed& arg)
 
 Fixed::Fixed(const float a)
 {
-    this->_rawbits = roundf(a * 256);
+    this->_rawbits = roundf(a * (int)this->lapuissance);
 }
 
 Fixed::Fixed(const int a)
 {
-    this->_rawbits = a * 256;
+    this->_rawbits = a * (int)this->lapuissance;
 }
 
 float Fixed::toFloat( void ) const
 {
     float result;
-    float diviser = 256;
+    float diviser = (int)this->lapuissance;
     float value = this->_rawbits;
     result = value / diviser;
     return (result);
@@ -45,7 +45,7 @@ float Fixed::toFloat( void ) const
 
 int Fixed::toInt( void ) const
 {
-    return (this->_rawbits / 256);
+    return (this->_rawbits / (int)this->lapuissance);
 }
 
 int  Fixed::getRawBits(void) const
@@ -126,44 +126,44 @@ Fixed Fixed::operator/(const Fixed& arg)
 
 bool Fixed::operator<(const Fixed& arg)
 {
-    if (this->_rawbits - arg.getRawBits() < 0)
+    if ((this->_rawbits - arg.getRawBits()) < 0)
         return (1);
-	return (0);
+    return (0);
 }
 
 bool Fixed::operator>(const Fixed& arg)
 {
-    if (this->_rawbits - arg.getRawBits() > 0)
+    if ((this->_rawbits - arg.getRawBits()) > 0)
         return (1);
-	return (0);
+    return (0);
 }
 
 bool Fixed::operator<=(const Fixed& arg)
 {
-    if (this->_rawbits - arg.getRawBits() <= 0)
+    if ((this->_rawbits - arg.getRawBits()) <= 0)
         return (1);
-	return (0);
+    return (0);
 }
 
 bool Fixed::operator>=(const Fixed& arg)
 {
-    if (this->_rawbits - arg.getRawBits() >= 0)
+    if ((this->_rawbits - arg.getRawBits()) >= 0)
         return (1);
-	return (0);
+    return (0);
 }
 
 bool Fixed::operator!=(const Fixed& arg)
 {
     if (this->_rawbits != arg.getRawBits())
         return (1);
-	return (0);
+    return (0);
 }
 
 bool Fixed::operator==(const Fixed& arg)
 {
     if (this->_rawbits == arg.getRawBits())
         return (1);
-	return (0);
+    return (0);
 }
 
 

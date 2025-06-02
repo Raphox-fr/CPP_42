@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 11:38:26 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/26 16:02:01 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/06/02 15:51:32 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ class Fixed
 		
 		private:
         	int _value;
+            const static int lapuissance = 256;
+
 		
 };
 	

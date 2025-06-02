@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 11:38:26 by rafaria           #+#    #+#             */
-/*   Updated: 2025/06/02 14:35:38 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/06/02 15:51:11 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define FIXED_HPP
 
 #include <iostream>
+
 
 class Fixed
 {
@@ -28,6 +29,7 @@ class Fixed
 
     private:
         int _value;
+        const static int lapuissance = 256;
 };
 
 #endif

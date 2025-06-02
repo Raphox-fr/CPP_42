@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 11:38:10 by rafaria           #+#    #+#             */
-/*   Updated: 2025/06/02 15:31:26 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/06/02 15:54:52 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,28 +29,27 @@ Fixed::Fixed(const Fixed& arg)
 
 Fixed::Fixed(const float a)
 {
-    this->_value = roundf(a * 256);
+    this->_value = roundf(a * (int)this->lapuissance);
     std::cout << "Float constructor called" << std::endl;
 }
 Fixed::Fixed(const int a)
 {
     std::cout << "Int constructor called" << std::endl;
-    this->_value = a * 256;
+    this->_value = a * (int)this->lapuissance;
 }
 
 float Fixed::toFloat( void ) const
 {
     float result;
-    float diviser = 256; 
+    float diviser = this->lapuissance; 
     float value = this->_value;
-    
     result = value / diviser;
     return (result);
 }
 
 int Fixed::toInt( void ) const
 {
-    return (this->_value / 256 );
+    return (this->_value / (int)this->lapuissance );
 }
 
 
