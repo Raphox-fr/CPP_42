@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 11:38:26 by rafaria           #+#    #+#             */
-/*   Updated: 2025/05/22 15:49:10 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/06/02 14:35:38 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,14 @@ class Fixed
     public:
         Fixed();
         ~Fixed();
-        Fixed(const Fixed& arg);
-        Fixed& operator=(const Fixed& arg);
+        Fixed(const Fixed &arg);
+        int getRawBits(void) const;
+        void setRawBits(int const raw);
         
-        int getRawBits( void ) const; //retourne la valeur du nombre à virgule fixe sans la convertir.
-        void setRawBits( int const raw ); // initialise la valeur du nombre à virgule fixe avec celle passée en paramètre.
+        Fixed &operator=(const Fixed &arg);
+
     private:
         int _value;
-        
-        
-        
 };
 
 #endif

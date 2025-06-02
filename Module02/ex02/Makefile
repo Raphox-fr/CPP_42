@@ -6,7 +6,7 @@ OBJS			=	${SRCS:.cpp=.o}
 
 CXX			=	c++
 
-# CPPFLAGS		=	-Werror -Wall -Wextra -std=c++98
+CPPFLAGS		=	-Werror -Wall -Wextra -std=c++98
 
 all			:	${NAME}
 
