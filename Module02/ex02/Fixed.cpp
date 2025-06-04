@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 11:38:10 by rafaria           #+#    #+#             */
-/*   Updated: 2025/06/02 15:58:42 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/06/03 16:41:20 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ int  Fixed::getRawBits(void) const
 {
     return (this->_rawbits);
 }
-
 
 // plus et moins et egal --------------------------------------
 Fixed &Fixed::operator=(const Fixed& arg)

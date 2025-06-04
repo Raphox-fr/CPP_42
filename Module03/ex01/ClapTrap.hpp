@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 11:38:26 by rafaria           #+#    #+#             */
-/*   Updated: 2025/06/03 16:12:22 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/06/04 12:05:57 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #define CLAPTRAP_HPP
 
 #include <iostream>
-
 
 class ClapTrap
 {
@@ -30,7 +29,7 @@ class ClapTrap
         int get_energy_pts();
 
  
-    private:
+    protected:
         std::string _name;
         int _hit_pts;
         int _energy_pts;
