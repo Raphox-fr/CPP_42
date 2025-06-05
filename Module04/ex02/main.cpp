@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 11:06:59 by rafaria           #+#    #+#             */
-/*   Updated: 2025/06/04 12:39:34 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/06/04 17:57:25 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,43 @@
 #include "ClapTrap.hpp"
 #include "FragTrap.hpp"
 
-
 int main()
 {
+    FragTrap f("Fraggy");
+
+    std::cout << "\n--- Test 1 : attack() spécifique FragTrap ---" << std::endl;
+    f.attack("Target");
+
+    std::cout << "\n--- Test 2 : highFivesGuys() ---" << std::endl;
+    f.highFivesGuys();
+
+    std::cout << "\n--- Test 3 : tester énergie avec attaques ---" << std::endl;
+    for (int i = 0; i < 100; ++i)
+        f.attack("Dummy");
+
+    std::cout << "\n--- Test 4 : tester repair() et takeDamage() ---" << std::endl;
+    f.beRepaired(25);
+    f.takeDamage(70);
+    f.beRepaired(20);
+
+    std::cout << "\n--- Test 5 : mourir et tester high five ---" << std::endl;
+    f.takeDamage(200);
+    f.highFivesGuys();
+
+    return 0;
+}
+
+
+
+
+// int main()
+// {
     // ClapTrap bob("Bob");
     // ClapTrap alice("Alice");
-    FragTrap bonjour("BONJOUR");
-    bonjour.attack("LA TEAM");
-    bonjour.takeDamage(20);
-    bonjour.beRepaired(9);
+    // FragTrap bonjour("BONJOUR");
+    // bonjour.attack("LA TEAM");
+    // bonjour.takeDamage(20);
+    // bonjour.beRepaired(9);
     
     // bonjour.attack("couou");
     
@@ -51,8 +79,8 @@ int main()
     // std::cout << "\n--- TEST 8 : Alice tente de prendre encore des dégâts alors qu'elle est morte ---" << std::endl;
     // alice.takeDamage(1);
 
-    return 0;
-}
+    // return 0;
+// }
 
 // int main()
 // {
