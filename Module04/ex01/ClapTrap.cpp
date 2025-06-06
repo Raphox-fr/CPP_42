@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 11:38:10 by rafaria           #+#    #+#             */
-/*   Updated: 2025/06/04 12:16:31 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/06/05 17:22:31 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ ClapTrap::ClapTrap(std::string name) {
     this->_Attack_dmg = 0;
 }
 
-ClapTrap::~ClapTrap() {
+ClapTrap::~ClapTrap() 
+{
     std::cout << "ClapTrap destructor called" << std::endl;
 }
 
@@ -49,7 +50,6 @@ void ClapTrap::attack(const std::string& target)
         << " has no energy left to attack." << std::endl;
         return;
     }
-    
     this->_energy_pts--;
     std::cout << "ClapTrap or ScavTrap " << this->get_name()
     << " attacks " << target

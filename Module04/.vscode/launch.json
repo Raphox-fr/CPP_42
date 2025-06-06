@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/rafaria/Documents/cpp/zizi/zozo/ex00",
-      "program": "/home/rafaria/Documents/cpp/zizi/zozo/ex00/build/Debug/outDebug",
+      "cwd": "/home/rafaria/Documents/cpp/Module04/ex01",
+      "program": "/home/rafaria/Documents/cpp/Module04/ex01/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

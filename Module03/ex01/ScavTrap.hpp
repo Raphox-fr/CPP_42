@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/05 11:52:05 by rafaria           #+#    #+#             */
-/*   Updated: 2025/06/05 12:22:39 by rafaria          ###   ########.fr       */
+/*   Created: 2025/06/04 11:46:15 by rafaria           #+#    #+#             */
+/*   Updated: 2025/06/06 11:03:55 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 
-#include "Dog.hpp"
-#include "Animal.hpp"
+#include "ClapTrap.hpp"
+#include <iostream>
 
-
-Dog::Dog() : Animal()
+class ScavTrap : public ClapTrap
 {
-    std::cout << "Dog constructor called" << std::endl;
-    this->type = "Dog";
-}
+    public:
+        ScavTrap(void);
+        ~ScavTrap();
+        ScavTrap(std::string name);
+        ScavTrap(const ScavTrap& arg);
+        ScavTrap &operator=(const ScavTrap &arg);
+        void attack(const std::string& target);
+        void guardGate() const;
+
+    private:
+};
 
 
-Dog::~Dog() 
-{
-    std::cout << "Dog destructor called" << std::endl;
-}
 
-void Dog::makeSound() const
-{
-    std::cout << "Woof" << std::endl;
-}
