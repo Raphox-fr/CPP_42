@@ -6,7 +6,7 @@
 /*   By: rafaria <rafaria@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 11:38:10 by rafaria           #+#    #+#             */
-/*   Updated: 2025/06/06 19:04:46 by rafaria          ###   ########.fr       */
+/*   Updated: 2025/06/30 15:25:35 by rafaria          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Animal::Animal()
 }
 
 
-Animal::~Animal() 
+Animal::~Animal()
 {
     std::cout << "Animal destructor called" << std::endl;
 }
